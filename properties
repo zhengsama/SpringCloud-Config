@@ -1,0 +1,20 @@
+server:
+  port: 8769
+spring :
+  application:
+     name : config-server
+  cloud :
+    config :
+      server:
+        git:
+          uri: https://github.com/hgsunhe/config-repo
+          label: master	  		                  #Git仓库的分支名
+          username: hgsunhe
+          password: Sunhe#301
+#eureka:
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+logging:
+  level:
+    org.springframework.cloud.config: DEBUG
